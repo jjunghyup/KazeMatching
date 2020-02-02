@@ -9,7 +9,7 @@ from robot.libraries.BuiltIn import BuiltIn
 def find_almost_similar_image_locations(im_search_path, im_source_path, threshold=0.8, rgb=True):
     im_search = cv2.imread(im_search_path, 1)
     im_source = cv2.imread(im_source_path, 1)
-    return ImageMatching(im_search, im_source, threshold, rgb).find_best_result()['result']
+    return ImageMatching(im_search, im_source, threshold, rgb).find_best_result()
 
 
 class ImageMatching(object):
