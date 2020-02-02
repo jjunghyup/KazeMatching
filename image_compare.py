@@ -5,21 +5,6 @@ import cv2
 import numpy as np
 from robot.libraries.BuiltIn import BuiltIn
 
-"""
-Robot Examples:
-    *** Settings ***
-    Library  LibImageSearch.py
-
-    *** Variables ***
-    ${search_image_path}    search.PNG
-    ${source_image_path}    source.PNG
-
-    *** Test Cases ***
-    find almost similar image locations test
-        ${result_point}     find almost similar image locations  ${search_image_path}   ${source_image_path}
-        log to console  ${result_point}
-"""
-
 
 def find_almost_similar_image_locations(im_search_path, im_source_path, threshold=0.8, rgb=True):
     im_search = cv2.imread(im_search_path, 1)
